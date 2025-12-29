@@ -61,11 +61,11 @@ jobs:
             -detailed-exitcode
   deploy: 
     name: "Deploy"
-    neess: preview
+    needs: preview
     if: needs.preview,outpots.TF_PLAN_EXITCODE == 2
-    enviroment: production
+    envirnoment: production
     runs-on: ubuntu-latest
-    strps: 
+    steps: 
       - name: checkout repository
         uses: actions/checkout@v6
       - name: Setup terraform
