@@ -62,7 +62,7 @@ jobs:
   deploy: 
     name: "Deploy"
     needs: preview
-    if: needs.preview,outpots.TF_PLAN_EXITCODE == 2
+    if: needs.preview.outpots.TF_PLAN_EXITCODE == 2
     environment: production
     runs-on: ubuntu-latest
     steps: 
