@@ -63,7 +63,7 @@ jobs:
     name: "Deploy"
     needs: preview
     if: needs.preview,outpots.TF_PLAN_EXITCODE == 2
-    envirnoment: production
+    environment: production
     runs-on: ubuntu-latest
     steps: 
       - name: checkout repository
